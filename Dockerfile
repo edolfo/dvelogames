@@ -1,6 +1,8 @@
 # You could use `gitpod/workspace-full` as well.
 FROM gitpod/workspace-python
 
+RUN cd /home/gitpod/.pyenv/plugins/python-build/../.. && git pull && cd -
+
 RUN pyenv install 3.12.4 \
     && pyenv global 3.12.4
 
